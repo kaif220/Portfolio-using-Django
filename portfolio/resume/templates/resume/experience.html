@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <h1>Experience</h1>
+        <ul>
+            {% for experience in experiences %}
+                <li>
+                    <h2>{{ experience.role }} at {{ experience.company }}</h2>
+                    <p>{{ experience.description }}</p>
+                    <p>{{ experience.start_date }} - {% if experience.end_date %}{{ experience.end_date }}{% else %}Present{% endif %}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

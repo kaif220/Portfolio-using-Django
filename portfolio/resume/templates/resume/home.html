@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <h1>Welcome to My Portfolio</h1>
+        <p>I am Mohammad Kaif Qureshi, a Data Analyst || Business Analyst.</p>
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill.name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
